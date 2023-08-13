@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Predicting Profit</h1>
+    <form action="/login" method ="post">
+
+        <p>Marketing spent</p>
+        <input type="text" name="ms" />
+
+        <p>Administration spend</p>
+        <input type="text" name="as" />
+
+        <p>R & D Spent</p>
+        <input type="text" name="rd" /> <br> <br>
+
+        <label for="states">Choose the states</label>      <!--adding dropdown since it is a categorical column -->
+        <select name="s" id="">
+            <option value="cal">California</option>
+            <option value="flo">Florida</option>
+            <option value="ny">New York</option>
+        </select>
+
+        <p><input type="submit" value="submit"/></p>
+    </form>
+
+    <h2>{{y}}</h2>          <!--should be in json file format -->
+</body>
+</html>
